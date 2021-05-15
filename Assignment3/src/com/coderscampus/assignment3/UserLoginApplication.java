@@ -34,7 +34,6 @@ public class UserLoginApplication {
 	static final String LOCKOUT_MSG = "Too many failed login attempts, you are now locked out.";
 	
 	public static User[] users = new User[4];
-//	public static UserServices userService = new UserServices();
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
 		
@@ -56,7 +55,6 @@ public class UserLoginApplication {
 				String password = scanner.nextLine();
 				
 				String name = UserServices.validateUser(username, password);
-//				String name = validateUser(username, password);
 				if (name != null) {
 					System.out.println("Welcome: " + name);
 					validLogin = true;
